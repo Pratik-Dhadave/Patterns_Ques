@@ -66,15 +66,89 @@ int main(){
     // 3*3*3
     // 4*4*4*4
     // 5*5*5*5*5
+    // int n;
+    // cin>>n;
+    // for(int row=0; row<n; row++){
+    //     for(int col=0; col<2*row+1; col++){
+    //         if(col%2==1){
+    //             cout<<"*";
+    //         }else{
+    //             cout<<row+1;
+    //         }            
+    //     }
+    //     cout<<endl;
+    // }
+
+    // int n;
+    // cin>>n;
+    // for(int row=0; row<n; row++){
+    //     for(int col=0; col<2*row+1; col++){
+    //         if(col%2==1){
+    //             cout<<"*";
+    //         }else{
+    //             cout<<row+1;
+    //         }            
+    //     }
+    //     cout<<endl;
+    // }
+    // for(int row=0; row<n; row++){
+    //     int totalcol=2*n-2*row-1;
+    //     for(int col=0; col<totalcol-1; col++){
+    //         if(col%2==1){
+    //             cout<<"*";
+    //         }else{
+    //             cout<<n-row-1;
+    //         }
+    //     }
+    //     cout<<endl;
+    // }
+    
+    // **********
+    // *       *
+    // *      *
+    // *     *
+    // *    *
+    // *   *
+    // *  *
+    // * *
+    // **
+    // *
+    // int n;
+    // cin>>n;
+    // for(int row=0; row<n; row++){
+    //     for(int col=0; col<n-row; col++){
+    //         if(row==0 || row==n-1){
+    //             cout<<"*";
+    //         }else{
+    //             if(col==0 || col==n-row-1){
+    //                 cout<<"*";
+    //             }else{
+    //                 cout<<" ";
+    //             }
+    //         }
+    //     }
+    //     cout<<endl;
+    // }
+
+    // *
+    // **
+    // * *
+    // *  *
+    // *   *
+    // ******
     int n;
     cin>>n;
     for(int row=0; row<n; row++){
-        for(int col=0; col<2*row+1; col++){
-            if(col%2==1){
+        for(int col=0; col<row+1; col++){
+            if(row==0 || row==n-1){
                 cout<<"*";
             }else{
-                cout<<row+1;
-            }            
+                if(col==0 || col==row+1-1){
+                    cout<<"*";
+                }else{
+                    cout<<" ";
+                }
+            }
         }
         cout<<endl;
     }
